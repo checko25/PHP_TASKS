@@ -9,7 +9,7 @@
 
     <body >
             <div >
-                <H1>Авторизация</h1>
+                <H1>Авторизация</H1>
                 <form method="GET" action="autho.php" >
                     <input type="text"  class = "form-control" name="login"  placeholder="Введите логин" value=""><br><br>
                     <input type="tel" class = "form-control" name="number"  placeholder="Введите номер телефона"><br><br>
