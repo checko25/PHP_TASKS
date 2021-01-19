@@ -18,12 +18,11 @@ $_SESSION['count'] = 0;
         } else {
              $phone = preg_replace('/\s|\+|-|\(|\)/','', $_GET['number']);
 }
-//if (isset($phone, $login, $mail)) {
+if (isset($phone, $login, $mail)) {
     $mysql = new mysqli('localhost', 'root', '', 'users');
-//} else {
-  //  exit();
-//}
-//$mysql->query("INSERT INTO `maininfo`(`login`, `email`, `phone`) VALUES('$login', '$email', $phone)") or die ("Error1");
+} else {
+   exit();
+}
 $result = $mysql->query("SELECT * FROM `maininfo` WHERE `login` = '$login' AND `phone` = '$phone'") or die ("Error2");
 $user = $result->fetch_assoc();
 if(($user) == 0){
